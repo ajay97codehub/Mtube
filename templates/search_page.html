@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% block title %} mtube {% endblock %}
+
+{% block card %}
+{% for m in movie_list %}
+<div class="card container-fluid" style="display:flex;display:inline-block;margin-block-end:0.5cm;margin-top: 0.5cm;margin-left:7%;margin-right:auto;width: 20rem;height:25; background-color:whitesmoke;box-sizing: border-box;border-color: black;" >
+    <!-- <img src="https://www.filmibeat.com/ph-small/2019/07/a1_156413638390.jpg" class="card-img" alt="..."> -->
+
+    <img style="widows: 18rem;height: 5cm;" src= {{m.mimg}} class="card-img" alt="...">
+    <div class="card-body">
+        <h6 style="overflow: hidden;" class="card-title">Movie: {{m.mtitle}}</h6>
+        <p class="card-text inline-block">IMDB:{{m.mimdb}} {{" "}}Duration:{{m.mduration}}</p>
+        <p class="card-text inline-block">Actors:{{m.mactors}}</p>
+        <p class="card-text inline-block">Directors:{{m.mdirectors}}</p>
+        <p class="card-text inline-block">Generes:{{m.mgenres}}</p>
+    </div>
+    <!-- <ul >
+        class="list-group list-group-flush" -->
+        <!-- class="list-group-item"> -->
+        <!-- <li imdb:{{imdb}} </li>
+        <li zoner:{{Zoner}} </li>
+        <li m:{{m}} </li>
+        <li actor:{{actor}} </li> -->
+    <!-- </ul> --> 
+    
+    <div class="card-body">
+        <button type="submit" class="btn btn-primary"> Play Now</button>
+        
+        <a href="/download/{{m.mid}}/" >
+        <button  style="float: right; " value="text" type="button" class="btn btn-dark">Download</button>
+        </a>
+    </div>
+    </div>
+
+    {% endfor %}
+    {% endblock %}
+    

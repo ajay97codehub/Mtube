@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% block title %} mtube {% endblock %}
+
+{% block card %}
+<div class="card container-fluid" style="display:flex;display:inline-block;margin-block-end:0.5cm;margin-top: 0.5cm;margin-left:40%;margin-right:auto;width: 20rem;height:25; background-color:whitesmoke;box-sizing: border-box;border-color: black;" >
+    <!-- <img src="https://www.filmibeat.com/ph-small/2019/07/a1_156413638390.jpg" class="card-img" alt="..."> -->
+
+    <img style="widows: 18rem;height: 5cm;" src= {{mimg}} class="card-img" alt="...">
+    <div class="card-body">
+        <h6 style="overflow: hidden;" class="card-title">Movie: {{mtitle}}</h6>
+        <p class="card-text inline-block">IMDB:{{mimdb}}{{" "}}Duration:{{mduration}}</p>
+        <p class="card-text inline-block">Actors:{{mactors}}</p>
+        <p class="card-text inline-block">Directors:{{mdirectors}}</p>
+        <p class="card-text inline-block">Generes:{{mgenres}}</p>
+    </div>
+    <!-- <ul >
+        class="list-group list-group-flush" -->
+        <!-- class="list-group-item"> -->
+        <!-- <li imdb:{{imdb}} </li>
+        <li zoner:{{Zoner}} </li>
+        <li m:{{m}} </li>
+        <li actor:{{actor}} </li> -->
+    <!-- </ul> --> 
+    
+    <div class="card-body">
+        <button  style="color: lightgreen; "  type="button" disabled class="btn btn-dark">Wait...</button>
+        </a>
+    </div>
+    
+    </div>
+    <h6 style="text-align: center;color: greenyellow;" > Your movies is  {{path}}</h6>
+{% endblock %}
