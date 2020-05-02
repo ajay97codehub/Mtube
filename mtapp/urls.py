@@ -10,4 +10,5 @@ urlpatterns = [
     path('about/', views.about_page),
     # path('download/', views.download_page),
     path('download/<str:m_id>/', views.download_page),
+    path('confirm/<str:mid>/', views.confirm),
 ]

@@ -81,6 +81,7 @@ def download_page(request,m_id):
     # YouTube(url1).streams.first().download(homedir +'/Downloads')
     # return render(request, )
     data={
+        "mid":m.id,
         "mtitle":m.mtitle,
         "mimg":m.mimg,
         "mduration":m.mduration,
@@ -92,3 +93,12 @@ def download_page(request,m_id):
     
     }
     return render(request,'download_page.html',data)
+
+    # ***************This is for confirm downloading **************************************
+def confirm(request,mid):
+    homedir = os.path.expanduser("~")
+    m=Movies.objects.get(pk=mid)
+    movie_url=m.murl
+    YouTube(movie_url).streams.first().download(homedir +'/Downloads')
+    
+
