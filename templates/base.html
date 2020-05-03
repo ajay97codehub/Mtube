@@ -12,8 +12,10 @@
     <title>{% block title %} mtube {% endblock %}</title>
     
   </head>
+  
   <body >
-    <nav  class="navbar navbar-expand-lg navbar-dark bg-dark" >
+    
+    <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark" >
         <a style="font-style: italic;"class="navbar-brand" >Welcome to Mtube</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -41,7 +43,6 @@
       </nav>
       
     </div>
-    
     {% block card %} {% endblock %}
   </body>
 </html>
